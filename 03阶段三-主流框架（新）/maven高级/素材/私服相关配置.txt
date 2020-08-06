@@ -1,0 +1,62 @@
+<!-- 配置用户名密码开始 -->
+<server>
+      <id>releases</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+    <server>
+      <id>snapshots</id>
+      <username>admin</username>
+      <password>admin123</password>
+</server>
+<!-- 配置用户名密码结束 -->
+
+
+<!--添加到要上传的项目pom中确定上传路径开始-->
+distributionManagement>
+    <repository>
+        <id>releases</id>
+    <url>http://localhost:8081/nexus/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+    <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+<!--添加到要上传的项目pom中确定上传路径结束-->
+
+<!--配置私服下载jar包的模板 开始-->
+<profile>  
+    <!--profile的id-->
+    <id>dev</id>  
+    <repositories>  
+      <repository> 
+        <id>nexus</id>  
+        <!--仓库地址，即nexus仓库组的地址-->
+        <url>http://localhost:8081/nexus/content/groups/public/</url>  
+        <!--是否下载releases构件-->
+        <releases>  
+          <enabled>true</enabled>  
+        </releases>  
+        <!--是否下载snapshots构件-->
+        <snapshots>  
+          <enabled>true</enabled>  
+        </snapshots>  
+      </repository>  
+    </repositories> 
+     <pluginRepositories> 
+        <!-- 插件仓库，maven的运行依赖插件，也需要从私服下载插件 -->
+        <pluginRepository> 
+            <id>public</id> 
+            <name>Public Repositories</name> 
+            <url>http://localhost:8081/nexus/content/groups/public/</url> 
+        </pluginRepository> 
+    </pluginRepositories> 
+</profile> 
+<!--配置私服下载jar包的模板 结束-->
+
+<!--激活下载模板 开始-->
+<activeProfiles>
+    <activeProfile>dev</activeProfile>
+</activeProfiles>
+<!--激活下载模板 结束-->

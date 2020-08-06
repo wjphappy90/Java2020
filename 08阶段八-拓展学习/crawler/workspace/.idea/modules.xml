@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/itcast-crawler-first/itcast-crawler-first.iml" filepath="$PROJECT_DIR$/itcast-crawler-first/itcast-crawler-first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itcast-crawler-jd/itcast-crawler-jd.iml" filepath="$PROJECT_DIR$/itcast-crawler-jd/itcast-crawler-jd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itcast-crawler-job/itcast-crawler-job.iml" filepath="$PROJECT_DIR$/itcast-crawler-job/itcast-crawler-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itcast-crawler-webmagic/itcast-crawler-webmagic.iml" filepath="$PROJECT_DIR$/itcast-crawler-webmagic/itcast-crawler-webmagic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itcast-es/itcast-es.iml" filepath="$PROJECT_DIR$/itcast-es/itcast-es.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simhash/simhasher.iml" filepath="$PROJECT_DIR$/simhash/simhasher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webmagic-core/webmagic-core.iml" filepath="$PROJECT_DIR$/webmagic-core/webmagic-core.iml" />
+    </modules>
+  </component>
+</project>

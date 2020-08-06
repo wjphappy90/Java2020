@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${hello}"></p>
+<form th:action="@{/demo/test}">
+    <input th:type="text" th:name="id">
+    <button>提交</button>
+</form>
+<table>
+    <tr>
+        <td>下标</td>
+        <td>编号</td>
+        <td>姓名</td>
+        <td>住址</td>
+    </tr>
+    <tr th:each="user,userStat:${userList}">
+        <td>
+            <span th:text="${userStat.index}"></span>
+        </td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.address}"></td>
+    </tr>
+</table>
+<div th:each="map,mapStat:${dataMap}">
+    <div th:text="${map}"></div>
+    key:<span th:text="${mapStat.current.key}"></span><br/>
+    value:<span th:text="${mapStat.current.value}"></span><br/>
+    ===============================
+</div>
+
+<div th:each="nm,nmStat:${names}">
+    <span th:text="${nmStat.count}"></span>
+    <span th:text="${nm}"></span>
+    ============
+</div>
+
+<div>
+    <span th:text="${#dates.format(now,'yyyy-MM-dd hh:mm:ss')}"></span>
+</div>
+<div>
+    <span th:if="${(age>=18)}">终于成年了</span>
+</div>
+
+<div id="W" th:include="footer::copy"></div>
+</body>
+</html>

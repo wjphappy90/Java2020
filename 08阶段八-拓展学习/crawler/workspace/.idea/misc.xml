@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/itcast-crawler-first/pom.xml" />
+        <option value="$PROJECT_DIR$/itcast-crawler-jd/pom.xml" />
+        <option value="$PROJECT_DIR$/itcast-crawler-webmagic/pom.xml" />
+        <option value="$PROJECT_DIR$/webmagic-core/pom.xml" />
+        <option value="$PROJECT_DIR$/itcast-crawler-job/pom.xml" />
+        <option value="$PROJECT_DIR$/simhash/pom.xml" />
+        <option value="$PROJECT_DIR$/itcast-es/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

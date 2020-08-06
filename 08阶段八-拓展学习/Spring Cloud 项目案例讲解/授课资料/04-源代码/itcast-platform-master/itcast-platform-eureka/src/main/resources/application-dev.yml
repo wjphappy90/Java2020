@@ -1,0 +1,11 @@
+eureka:
+  instance:
+    ip-address: 127.0.0.1
+
+# Spring Cloud应用监控与管理Actuator
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
